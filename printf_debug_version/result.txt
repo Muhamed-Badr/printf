@@ -1,0 +1,1575 @@
+1024
+-/0.,
+[My `_printf`]
+=========
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 5
+[-0] out _printf()
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 6
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _pri0
+2147483647
+ntf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 2
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 11
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] -./,),(-*,(
+-./,),(.*.+
+2147482623
+{in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 12
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 12
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 11
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: T
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 9
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+	There is 1024 bytes in 1 KB
+	total_bytes_written: 0
+		format[9]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 11
+		total_bytes_written: 0
+		format[11]:  
+
+
+
+	===END of LOOP 1====================
+		format[11]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 10
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 11
+		total_bytes_written: 0
+		format[21]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 23
+		total_bytes_written: 0
+		format[23]:  
+
+
+
+	===END of LOOP 2====================
+		format[23]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 4
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 23
+		total_bytes_written: 0
+		format[27]: (nil)
+
+
+
+	===END of LOOP 3====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 28
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]:  
+
+
+
+	===END of LOOP 1====================
+		format[2]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 3
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st whi1024 - 2048 = -/0.,
+le} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[5]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 7
+		total_bytes_written: 0
+		format[7]:  
+
+
+
+	===END of LOOP 2====================
+		format[7]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 3
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 7
+		total_bytes_written: 0
+		format[10]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 12
+		total_bytes_written: 0
+		format[12]: 
+
+
+
+
+	===END of LOOP 3====================
+		format[12]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 12
+		total_bytes_written: 0
+		format[13]: (nil)
+
+
+
+	===END of LOOP 4====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 20
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]:  
+
+
+
+	===END of LOOP 1====================
+		format[2]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 3
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-./,),(-*,( + 2147483647 = -/
+-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[5]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 7
+		total_bytes_written: 0
+		format[7]:  
+
+
+
+	===END of LOOP 2====================
+		format[7]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 3
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 7
+		total_bytes_written: 0
+		format[10]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 12
+		total_bytes_written: 0
+		format[12]: 
+
+
+
+
+	===END of LOOP 3====================
+		format[12]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 12
+		total_bytes_written: 0
+		format[13]: (nil)
+
+
+
+	===END of LOOP 4====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 30
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in h1024
+-/0.,
+0
+andle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 5
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 6
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 2
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_value2147483647
+-./,),(-*,(
+s()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 11
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 12
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2]-./,),(.*.+
+2147482623
+ {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 12
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 11
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: T
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 9
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[9]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 11
+		total_bytes_written: 0
+		format[11]:  
+
+
+
+	===END of LOOP 1====================
+		format[11]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 10
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 11
+		total_bytes_written: 0
+		format[21]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _pThere is 1024 bytes in 1 KB
+rintf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 23
+		total_bytes_written: 0
+		format[23]:  
+
+
+
+	===END of LOOP 2====================
+		format[23]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 4
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 23
+		total_bytes_written: 0
+		format[27]: (nil)
+
+
+
+	===END of LOOP 3====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 28
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]:  
+
+
+
+	===END of LOOP 1====================
+		format[2]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 3
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[5]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 7
+		total_bytes_written: 0
+		format[7]:  
+
+
+
+	===END of LOOP 2====================
+		format[7]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 3
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 7
+		total_bytes_written: 0
+		format[10]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values1024 - 2048 = -/0.,
+()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 12
+		total_bytes_written: 0
+		format[12]: 
+
+
+
+
+	===END of LOOP 3====================
+		format[12]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 12
+		total_bytes_written: 0
+		format[13]: (nil)
+
+
+
+	===END of LOOP 4====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 20
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]:  
+
+
+
+	===END of LOOP 1====================
+		format[2]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 3
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[5]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 7
+		total_bytes_written: 0
+		format[7]:  
+
+
+
+	===END of LOOP 2====================
+		format[7]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 3
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 7
+		total_bytes_written: 0
+		format[10]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> i-./,),(-*,( + 2147483647 = -/
+n handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 12
+		total_bytes_written: 0
+		format[12]: 
+
+
+
+
+	===END of LOOP 3====================
+		format[12]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 12
+		total_bytes_written: 0
+		format[13]: (nil)
+
+
+
+	===END of LOOP 4====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 30
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]:  
+
+
+
+	===END of LOOP 1====================
+		format[2]:  
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 4
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[6]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 8
+		total_bytes_written: 0
+		format[8]: 
+
+
+
+
+	===END of LOOP 2====================
+		format[8]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 8
+		total_bytes_written: 0
+		format[9]: (nil)
+
+
+
+	===END of LOOP 3====================
+	[-1] {in _printf()}1024 == 1024
+iddi1024iddiiddi
+10000
+ out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 13
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: i
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 4
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[4]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 6
+		total_bytes_written: 0
+		format[6]: i
+
+
+
+	===END of LOOP 1====================
+		format[6]: i
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 9
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 6
+		total_bytes_written: 0
+		format[15]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 17
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_d()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_d()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_d()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 6
+[+0] in _printf()
+	[+1] {in _printf()} in 1st while
+		format[0]: %
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 0
+		[+3] {in _printf() -> in 1st while} in handle_str()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 0
+		total_bytes_written: 0
+		format[0]: %
+		[+5] {in _printf() -> in 1st while} in handle_fs()
+			[+6] {in _printf() -> in 1st while -> in handle_fs()} in get_fs_values()10000
+
+				fs_len: 2
+			[-6] {in _printf() -> in 1st while -> in handle_fs()} out get_fs_values()
+			[+7] {in _printf() -> in 1st while -> in handle_fs()} in get_type_func()
+			[-7] {in _printf() -> in 1st while -> in handle_fs()} out get_type_func()
+			[+9] {in _printf() -> in 1st while -> in handle_fs()} in handle_i()
+				[-11] {in _printf() -> in 1st while -> in handle_fs() -> in handle_i()} out 2nd while(fs->width)
+			[-9] {in _printf() -> in 1st while -> in handle_fs()} out handle_i()
+			fs_len: 2
+		[-5] {in _printf() -> in 1st while} out handle_fs()
+		format_i: 2
+		total_bytes_written: 0
+		format[2]: 
+
+
+
+
+	===END of LOOP 1====================
+		format[2]: 
+
+		[+2] {in _printf() -> in 1st while} in 2nd while
+		[-2] {in _printf() -> in 1st while} out 2nd while
+		str_len: 1
+		[+3] {in _printf() -> in 1st while} in handle_str()
+			[+4] {in _printf() -> in 1st while -> in handle_str()} in _strncpy()
+			[-4] {in _printf() -> in 1st while -> in handle_str()} out _strncpy()
+		[-3] {in _printf() -> in 1st while} out handle_str()
+		format_i: 2
+		total_bytes_written: 0
+		format[3]: (nil)
+
+
+
+	===END of LOOP 2====================
+	[-1] {in _printf()} out 1st while
+[-0] out _printf()
+===END of My _printf()============================================
+n: 6
+[The C `printf`]
+=========
+1024
+n: 5
+-1024
+n: 6
+0
+n: 2
+2147483647
+n: 11
+-2147483648
+n: 12
+-2147482625
+n: 12
+2147482623
+n: 11
+There is 1024 bytes in 1 KB
+n: 28
+1024 - 2048 = -1024
+n: 20
+-2147483648 + 2147483647 = -1
+n: 30
+1024
+n: 5
+-1024
+n: 6
+0
+n: 2
+2147483647
+n: 11
+-2147483648
+n: 12
+-2147482625
+n: 12
+2147482623
+n: 11
+There is 1024 bytes in 1 KB
+n: 28
+1024 - 2048 = -1024
+n: 20
+-2147483648 + 2147483647 = -1
+n: 30
+1024 == 1024
+n: 13
+iddi1024iddiiddi
+n: 17
+10000
+n: 6
+10000
+n: 6

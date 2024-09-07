@@ -13,13 +13,24 @@ int int_to_str(char *buf, int *buf_index, int num, int num_len);
 int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 {
 	int total_bytes_written = 0, num, num_len;
-	char ch = ((fs->flags.flag_zero) ? '0' : ' ');
+	char padding_ch = ((fs->flags.flag_zero) ? '0' : ' ');
 
 	num = va_arg(ap, int);
 	num_len = _num_digits(num);
 
+	if (!fs->flags.flag_minus)
+		while ((fs->width - num_len) > 0)
+		{
+			total_bytes_written += _check_buf(buf, buf_index);
+			buf[*buf_index + 1] = padding_ch;
+			(*buf_index)++;
+			fs->width--;
+		}
+
 	if (num < 0 || fs->flags.flag_plus || fs->flags.flag_space)
 	{
+		if (!fs->flags.flag_minus)
+			(*buf_index)--;
 		total_bytes_written += _check_buf(buf, buf_index);
 		if (num < 0)
 			buf[*buf_index + 1] = '-';
@@ -37,7 +48,7 @@ int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 	while (fs->width > 0)
 	{
 		total_bytes_written += _check_buf(buf, buf_index);
-		buf[*buf_index + 1] = ch;
+		buf[*buf_index + 1] = padding_ch;
 		(*buf_index)++;
 		fs->width--;
 	}

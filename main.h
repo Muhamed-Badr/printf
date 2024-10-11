@@ -116,5 +116,6 @@ int handle_R(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_p(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_n(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_mod_symbol(char *buf, int *buf_index, fs_t *fs, va_list ap);
+int apply_padding(char *buf, int *buf_index, char padding_ch, int padding_len);
 
 #endif /* MAIN_H */

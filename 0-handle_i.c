@@ -13,27 +13,46 @@ int int_to_str(char *buf, int *buf_index, int num, int num_len);
 int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 {
 	int total_bytes_written = 0, num, num_len;
-	char padding_ch = ((fs->flags.flag_zero) ? '0' : ' '), is_padded = 0;
+	char padding_ch, sign_required = 0;
+	char pad_start = 0, pad_mid = 0, pad_end = 0;
 
+	/*
+	 * Collect some information:
+	 *     1. The number `num`.
+	 *     2. The number length `num_len`.
+	 *     3. A flag `sign_required`: check if we need to reserve a place for
+	 *         the number's sign OR not (its value will be only `1` or `0`).
+	 *     4. The padding character `padding_ch`.
+	 *     5. The padding position:
+	 *            -> Padding before the number and its sign `pad_start`.
+	 *            -> Padding between the number and its sign `pad_mid`.
+	 *            -> Padding after the number and its sign `pad_end`.
+	 */
 	num = va_arg(ap, int);
 	num_len = _num_digits(num);
-
-	if (!(fs->flags.flag_minus) && (fs->width - num_len) > 0)
+	sign_required = (num < 0 || fs->flags.flag_plus || fs->flags.flag_space);
+	padding_ch = ((fs->flags.flag_zero && !fs->flags.flag_minus) ? '0' : ' ');
+	if ((fs->width - (num_len + sign_required)) > 0)
 	{
-		while ((fs->width - num_len) > 0)
-		{
-			total_bytes_written += _check_buf(buf, buf_index);
-			buf[*buf_index + 1] = padding_ch;
-			(*buf_index)++;
-			fs->width--;
-		}
-		is_padded = 1;
+		if (fs->flags.flag_minus)
+			pad_end = 1;
+		else if (padding_ch == '0')
+			pad_mid = 1;
+		else
+			pad_start = 1;
 	}
 
-	if (num < 0 || fs->flags.flag_plus || fs->flags.flag_space)
+	/*
+	 * Padding by `padding_ch` before number(including its sign),
+	 *  if The `flag_minus` turn off (default/normal case).
+	 */
+	if (pad_start)
+		total_bytes_written += apply_padding(buf, buf_index, padding_ch,
+				(fs->width - (num_len + sign_required)));
+
+	/* Handle sign or space for the number */
+	if (sign_required)
 	{
-		if (is_padded)
-			(*buf_index)--;
 		total_bytes_written += _check_buf(buf, buf_index);
 		if (num < 0)
 			buf[*buf_index + 1] = '-';
@@ -42,19 +61,26 @@ int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 		else
 			buf[*buf_index + 1] = ' ';
 		(*buf_index)++;
-		fs->width--;
 	}
 
+	/*
+	 * Padding by `padding_ch` between the number and its sign,
+	 *  if The `flag_minus` turn off.
+	 */
+	if (pad_mid)
+		total_bytes_written += apply_padding(buf, buf_index, padding_ch,
+				(fs->width - (num_len + sign_required)));
+
+	/* Convert the integer to string and add it to the buffer */
 	total_bytes_written += int_to_str(buf, buf_index, num, num_len);
-	fs->width -= num_len;
 
-	while (fs->width > 0)
-	{
-		total_bytes_written += _check_buf(buf, buf_index);
-		buf[*buf_index + 1] = padding_ch;
-		(*buf_index)++;
-		fs->width--;
-	}
+	/*
+	 * Padding by `padding_ch` after number(including its sign),
+	 *  if The `flag_minus` turn on
+	 */
+	if (pad_end)
+		total_bytes_written += apply_padding(buf, buf_index, padding_ch,
+				(fs->width - (num_len + sign_required)));
 
 	return (total_bytes_written);
 }

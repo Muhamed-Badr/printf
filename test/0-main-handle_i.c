@@ -69,6 +69,8 @@ int main(void)
 	printf("n: %d\n", n);
 
 
+	printf("==============================================\n");
+
 	puts("[The C `printf`]");
 	puts("=========");
 

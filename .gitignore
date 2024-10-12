@@ -9,3 +9,4 @@ vgcore*
 
 # Ignore specific directories
 tmp/
+result/

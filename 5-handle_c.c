@@ -12,40 +12,37 @@
 int handle_c(char *buf, int *buf_index, fs_t *fs, va_list ap)
 {
 	int total_bytes_written = 0, ch;
-	char padding_ch = ' ';
+	char padding_ch = ' ', pad_start = 0, pad_end = 0;
 
 	ch = va_arg(ap, int);
+	if ((fs->width - 1) > 0)
+	{
+		if (fs->flags.flag_minus)
+			pad_end = 1;
+		else
+			pad_start = 1;
+	}
 
 	/*
-	 * Padding by ' ' before character,
-	 *  if The `flag_minus` turn off (default/normal case)
+	 * Padding by `padding_ch` before character,
+	 *  if The `flag_minus` turn off (default/normal case).
 	 */
-	if (!fs->flags.flag_minus)
-		while ((fs->width - 1) > 0)
-		{
-			total_bytes_written += _check_buf(buf, buf_index);
-			buf[*buf_index + 1] = padding_ch;
-			(*buf_index)++;
-			fs->width--;
-		}
+	if (pad_start)
+		total_bytes_written += apply_padding(buf, buf_index, padding_ch,
+				(fs->width - 1));
 
-	/* Store the character in buffer(`buf`) */
+	/* Store the character in buffer(`buf`). */
 	total_bytes_written += _check_buf(buf, buf_index);
 	buf[*buf_index + 1] = ch;
 	(*buf_index)++;
-	fs->width--;
 
 	/*
-	 * Padding by ' ' after character,
-	 *  if The `flag_minus` turn on
+	 * Padding by `padding_ch` after character,
+	 *  if The `flag_minus` turn on.
 	 */
-	while (fs->width > 0)
-	{
-		total_bytes_written += _check_buf(buf, buf_index);
-		buf[*buf_index + 1] = padding_ch;
-		(*buf_index)++;
-		fs->width--;
-	}
+	if (pad_end)
+		total_bytes_written += apply_padding(buf, buf_index, padding_ch,
+				(fs->width - 1));
 
 	return (total_bytes_written);
 }

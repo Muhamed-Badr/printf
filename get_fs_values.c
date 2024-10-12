@@ -14,6 +14,7 @@ int str_to_int(const char *str);
 int get_fs_values(const char *format, fs_t *fs)
 {
 	int format_index;
+	char *result;
 
 	/*
 	 * -> Turn flag on if its corresponding symbol is exist.
@@ -50,11 +51,13 @@ int get_fs_values(const char *format, fs_t *fs)
 	}
 
 	/* Set length modifier value if exist. */
-	if (_strchr("lh", format[format_index]))
+	result = _strchr("lh", format[format_index]);
+	if (result != NULL && *result != '\0')
 		fs->length = format[format_index++];
 
 	/* Set type conversion if exist. */
-	if (_strchr("dioxXucsSfeEgGpn%", format[format_index]))
+	result = _strchr("dioxXucsSbrRpnfeEgG%", format[format_index]);
+	if (result != NULL && *result != '\0')
 		fs->type_conversion = format[format_index++];
 
 	return (format_index);

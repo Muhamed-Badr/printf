@@ -37,6 +37,22 @@ typedef struct flags
 } flags_t;
 
 /**
+ * struct precision - A structure to store precision details.
+ * @value: Precision value specified in the format (".2" for precision 2).
+ * @is_set: Flag to indicate whether the precision was explicitly set
+ *           (1 if set, 0 otherwise).
+ *
+ * Description: This structure represents the precision specified in
+ *               a format specifier. It holds the precision value and indicates
+ *               whether the precision was defined in the format string.
+ */
+typedef struct precision
+{
+	short int value;
+	char is_set;
+} precision_t;
+
+/**
  * struct fs - A structure to hold the components of a format specifier.
  * @flags: A structure of type `flags_t` that holds the flag settings.
  * @width: Represents the minimum field width for the output.
@@ -59,8 +75,8 @@ typedef struct flags
 typedef struct fs
 {
 	flags_t flags;
+	precision_t precision;
 	short int width;
-	short int precision;
 	char length;
 	char type_conversion;
 } fs_t;
@@ -101,6 +117,7 @@ char *_strchr(char *s, char c);
 int _isdigit(int c);
 int _num_digits(int num);
 int _check_buf(char *buf, int *buf_index);
+int apply_padding(char *buf, int *buf_index, char padding_ch, int padding_len);
 
 int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_o(char *buf, int *buf_index, fs_t *fs, va_list ap);
@@ -116,6 +133,6 @@ int handle_R(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_p(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_n(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_mod_symbol(char *buf, int *buf_index, fs_t *fs, va_list ap);
-int apply_padding(char *buf, int *buf_index, char padding_ch, int padding_len);
 
 #endif /* MAIN_H */
+

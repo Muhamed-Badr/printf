@@ -15,7 +15,7 @@ int handle_fs(const char *format, char *buf, int *buf_index,
 		int *total_bytes_written, va_list ap)
 {
 	/* Declare and Initialize the `fs_t` struct */
-	fs_t fs = {{0, 0, 0, 0, 0}, 0, 6, '\0', '\0'};
+	fs_t fs = {{0, 0, 0, 0, 0}, {6, 0}, 0, '\0', '\0'};
 	int fs_len, (*func)(char *, int *, fs_t *, va_list);
 
 	fs_len = get_fs_values(format, &fs);

@@ -20,6 +20,7 @@ int get_fs_values(const char *format, fs_t *fs)
 	 * -> why `format_index` start from '1'? to skip '%'.
 	 */
 	for (format_index = 1;; format_index++)
+	{
 		if (format[format_index] == ' ')
 			fs->flags.flag_space = 1;
 		else if (format[format_index] == '+')
@@ -32,6 +33,7 @@ int get_fs_values(const char *format, fs_t *fs)
 			fs->flags.flag_hash = 1;
 		else
 			break;
+	}
 
 	/* Set width value if exist. */
 	for (; _isdigit(format[format_index]); format_index++)
@@ -39,9 +41,13 @@ int get_fs_values(const char *format, fs_t *fs)
 
 	/* Set precision value if '.' symbol is exist. */
 	if (format[format_index] == '.')
+	{
+		fs->precision.is_set = 1;
+		fs->precision.value = 0;
 		for (format_index += 1; _isdigit(format[format_index]); format_index++)
-			fs->precision = (fs->precision * 10) + (format[format_index] -
-					'0');
+			fs->precision.value = (fs->precision.value * 10) +
+				(format[format_index] - '0');
+	}
 
 	/* Set length modifier value if exist. */
 	if (_strchr("lh", format[format_index]))

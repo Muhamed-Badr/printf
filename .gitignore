@@ -3,6 +3,8 @@
 
 # Ignore specific files
 main.c
+## for backup files
+*~
 
 # Ignore valgrind error files
 vgcore*

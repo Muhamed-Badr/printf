@@ -115,7 +115,8 @@ char *_strncpy(char *dest, const char *src, int n);
 int _strlen(char *s);
 char *_strchr(char *s, char c);
 int _isdigit(int c);
-int _num_digits(int num);
+int _num_digits(int num, int base);
+char *_num_to_str(char *buf, int buf_size, int num, int num_len, int base);
 int _check_buf(char *buf, int *buf_index);
 int apply_padding(char *buf, int *buf_index, char padding_ch, int padding_len);
 

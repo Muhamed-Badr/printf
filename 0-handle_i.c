@@ -1,5 +1,4 @@
 #include "main.h"
-int int_to_str(char *buf, int *buf_index, int num, int num_len);
 
 /**
  * handle_i - Handle the type conversion `i` or `d` (integer values/numbers).
@@ -13,7 +12,7 @@ int int_to_str(char *buf, int *buf_index, int num, int num_len);
 int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 {
 	int total_bytes_written = 0, num, num_len;
-	char padding_ch, sign_required = 0;
+	char padding_ch, sign_required = 0, tmp_buf[64];
 	char pad_start = 0, pad_mid = 0, pad_end = 0;
 
 	/*
@@ -29,7 +28,7 @@ int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 	 *            -> Padding after the number and its sign `pad_end`.
 	 */
 	num = va_arg(ap, int);
-	num_len = _num_digits(num);
+	num_len = _num_digits(num, 10);
 	sign_required = (num < 0 || fs->flags.flag_plus || fs->flags.flag_space);
 	padding_ch = ((fs->flags.flag_zero && !fs->flags.flag_minus) ? '0' : ' ');
 	if ((fs->width - (num_len + sign_required)) > 0)
@@ -72,7 +71,12 @@ int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 				(fs->width - (num_len + sign_required)));
 
 	/* Convert the integer to string and add it to the buffer */
-	total_bytes_written += int_to_str(buf, buf_index, num, num_len);
+	if (_num_to_str(tmp_buf, sizeof(tmp_buf), num, num_len, 10))
+		/*
+		 * Use `handle_str()` to copy the converted string from temporary
+		 *  buffer `tmp_buf` to the actual buffer `buf`
+		 */
+		total_bytes_written += handle_str(tmp_buf, num_len, buf, buf_index);
 
 	/*
 	 * Padding by `padding_ch` after number(including its sign),
@@ -81,38 +85,6 @@ int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 	if (pad_end)
 		total_bytes_written += apply_padding(buf, buf_index, padding_ch,
 				(fs->width - (num_len + sign_required)));
-
-	return (total_bytes_written);
-}
-
-/**
- * int_to_str - Convert integer values to string.
- * @buf: A pointer the buffer where the formatted output should be stored.
- * @buf_index: A pointer to the current index in the buffer.
- * @num: The integer value that needs to be converted.
- * @num_len: The length of integer value `num`.
- *
- * Return: `total_bytes_written` which `total_bytes_written >= 0`.
- */
-int int_to_str(char *buf, int *buf_index, int num, int num_len)
-{
-	int total_bytes_written = 0, mul_of_10 = 1, i;
-	unsigned int unsigned_num = num;
-
-	if (num < 0)
-		unsigned_num *= (-1);
-
-	for (i = 1; i < num_len; i++)
-		mul_of_10 *= 10;
-
-	while (mul_of_10)
-	{
-		total_bytes_written += _check_buf(buf, buf_index);
-		buf[*buf_index + 1] = (unsigned_num / mul_of_10) + '0';
-		unsigned_num %= mul_of_10;
-		mul_of_10 /= 10;
-		(*buf_index)++;
-	}
 
 	return (total_bytes_written);
 }

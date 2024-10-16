@@ -14,15 +14,9 @@ int handle_b(char *buf, int *buf_index, fs_t *fs, va_list ap)
 	int num, num_len, i;
 	char tmp_buf[64];
 
+	(void)fs;
 	num = va_arg(ap, int);
-	num_len = _num_digits(num, 2);
-
-	/*
-	 * Ensure `num_len` is a multiple of `8`, which is important for accurate
-	 *  2's complement representation of negative values.
-	 */
-	if (num_len % 8)
-		num_len += (8 - (num_len % 8));
+	num_len = (num < 0) ? 32 : _num_digits(num, 2);
 
 	/* Convert the number to string and add it to the temporary buffer */
 	if (_num_to_str(tmp_buf, sizeof(tmp_buf), num, num_len, 2))
@@ -45,8 +39,6 @@ int handle_b(char *buf, int *buf_index, fs_t *fs, va_list ap)
 				tmp_buf[i] = (tmp_buf[i] == '1') ? '0' : '1';
 		}
 	}
-
-	(void)fs;
 
 	/*
 	 * Use `handle_str()` to copy the converted string from temporary

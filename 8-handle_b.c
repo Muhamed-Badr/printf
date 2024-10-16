@@ -11,8 +11,8 @@
  */
 int handle_b(char *buf, int *buf_index, fs_t *fs, va_list ap)
 {
-	int num, num_len;
-	char tmp_buf[64], i;
+	int num, num_len, i;
+	char tmp_buf[64];
 
 	num = va_arg(ap, int);
 	num_len = _num_digits(num, 2);

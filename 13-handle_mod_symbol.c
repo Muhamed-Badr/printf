@@ -13,6 +13,10 @@ int handle_mod_symbol(char *buf, int *buf_index, fs_t *fs, va_list ap)
 {
 	int total_bytes_written = 0;
 
+	/* Avoid `-Werror=unused-parameter` compiler error*/
+	(void)fs;
+	(void)ap;
+
 	/* Store the character '%' in buffer(`buf`). */
 	total_bytes_written += _check_buf(buf, buf_index);
 	buf[*buf_index + 1] = '%';

@@ -17,12 +17,7 @@ int handle_s(char *buf, int *buf_index, fs_t *fs, va_list ap)
 	str = va_arg(ap, char *);
 	/*This condition is applied in Linux, in Win (`str = "(null)";` always).*/
 	if (str == NULL)
-	{
-		if (fs->precision.is_set)
-			str = "";
-		else
-			str = "(null)";
-	}
+		str = (fs->precision.is_set) ? ""  : "(null)";
 	str_len = _strlen(str);
 	/*
 	 * Limit `str_len` to the precision value if it is set and smaller
@@ -32,10 +27,12 @@ int handle_s(char *buf, int *buf_index, fs_t *fs, va_list ap)
 	if (fs->precision.is_set && fs->precision.value < str_len)
 		str_len = fs->precision.value;
 	if ((fs->width - str_len) > 0) /* Check padding position */
+	{
 		if (fs->flags.flag_minus)
 			pad_end = 1;
 		else
 			pad_start = 1;
+	}
 	/*
 	 * Padding by `padding_ch` before string,
 	 *  if The `flag_minus` turn off (default/normal case).

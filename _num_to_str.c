@@ -19,8 +19,9 @@
  */
 char *_num_to_str(char *buf, int buf_size, int num, int num_len, int base)
 {
+	int i, j;
 	unsigned int unsigned_num = num;
-	char tmp, i, j;
+	char tmp;
 
 	/* Check the buffer, and ensure that its size will fit the number */
 	if (buf == NULL || buf_size < num_len)

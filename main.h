@@ -114,6 +114,7 @@ int (*get_type_func(char ch))(char *, int *, fs_t *, va_list);
 char *_strncpy(char *dest, const char *src, int n);
 int _strlen(char *s);
 char *_strchr(char *s, char c);
+char *_to_upper(char *buf, int buf_size);
 int _isdigit(int c);
 int _num_digits(int num, int base);
 int _unum_digits(unsigned int num, int base);

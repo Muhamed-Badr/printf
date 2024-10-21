@@ -2,7 +2,7 @@
 
 /**
  * _unum_to_str - Like `_num_to_str()` function but for `unsigned int`.
- * @buf: A pointer the buffer where the converted number should be stored.
+ * @buf: A pointer to the buffer where the converted number should be stored.
  * @buf_size: The buffer size.
  * @num: The decimal number that needs to be converted.
  * @num_len: The length of the number (in digits) that needs to be converted.
@@ -21,7 +21,7 @@ char *_unum_to_str(char *buf, int buf_size, unsigned int num, int num_len,
 		int base)
 {
 	int i, j;
-	char tmp;
+	char tmp, base_chars[] = "0123456789abcdef";
 
 	/* Check the buffer, and ensure that its size will fit the number */
 	if (buf == NULL || buf_size < num_len)
@@ -30,7 +30,7 @@ char *_unum_to_str(char *buf, int buf_size, unsigned int num, int num_len,
 	/* Convert each digit to its corresponding character in the given base. */
 	for (i = 0; i < num_len; i++)
 	{
-		buf[i] = (num % base) + '0';
+		buf[i] = base_chars[(num % base)];
 		num /= base;
 	}
 

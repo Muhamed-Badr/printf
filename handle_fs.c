@@ -4,7 +4,7 @@
  * handle_fs - Handle format specifier.
  * @format: A pointer to the format that the optional/variadic parameters
  *           passed should follow when printing.
- * @buf: A pointer the buffer where the formatted output should be stored.
+ * @buf: A pointer to the buffer where the formatted output should be stored.
  * @buf_index: A pointer to the current index in the buffer.
  * @total_bytes_written:A pointer to the total number of bytes written so far.
  * @ap: A `va_list` object that contains the variadic arguments.

@@ -2,7 +2,7 @@
 
 /**
  * _check_buf - Check buffer.
- * @buf: A pointer the buffer where the formatted output should be stored.
+ * @buf: A pointer to the buffer where the formatted output should be stored.
  * @buf_index: A pointer to the current index in the buffer.
  *
  * Return: `total_bytes_written` which `total_bytes_written >= 0`.

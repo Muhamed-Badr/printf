@@ -2,7 +2,7 @@
 
 /**
  * _num_to_str - Convert a number `num` to a string based on a given `base`.
- * @buf: A pointer the buffer where the converted number should be stored.
+ * @buf: A pointer to the buffer where the converted number should be stored.
  * @buf_size: The buffer size.
  * @num: The decimal number that needs to be converted.
  * @num_len: The length of the number (in digits) that needs to be converted.

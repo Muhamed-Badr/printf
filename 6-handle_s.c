@@ -2,7 +2,7 @@
 
 /**
  * handle_s - Handle the type conversion `s` (string).
- * @buf: A pointer the buffer where the formatted output should be stored.
+ * @buf: A pointer to the buffer where the formatted output should be stored.
  * @buf_index: A pointer to the current index in the buffer.
  * @fs: A pointer to `fs_t` struct, it stores the format specifier values.
  * @ap: A `va_list` object that contains the variadic arguments.

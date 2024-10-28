@@ -118,8 +118,11 @@ char *_to_upper(char *buf, int buf_size);
 int _isdigit(int c);
 int _num_digits(int num, int base);
 int _unum_digits(unsigned int num, int base);
+int _lunum_digits(unsigned long num, int base);
 char *_num_to_str(char *buf, int buf_size, int num, int num_len, int base);
 char *_unum_to_str(char *buf, int buf_size, unsigned int num, int num_len,
+		int base);
+char *_lunum_to_str(char *buf, int buf_size, unsigned long num, int num_len,
 		int base);
 int _check_buf(char *buf, int *buf_index);
 int apply_padding(char *buf, int *buf_index, char padding_ch, int padding_len);

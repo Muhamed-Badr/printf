@@ -13,31 +13,35 @@
  *                  - `16` for hexadecimal.
  *                  - `8` for octal.
  *                  - ...etc.
+ * @is_signed: A flag that tells the function how to process the passed number:
+ *             - If `1`, the function treats `num` as signed.
+ *             - If `0`, the function treats `num` as unsigned.
  *
  * Return: On success, A pointer to the buffer `buf`.
  *         ON failure, NULL('\0').
  */
-char *_num_to_str(char *buf, int buf_size, int num, int num_len, int base)
+char *_num_to_str(char *buf, int buf_size, void *num, int num_len,
+		int base, char is_signed)
 {
-	int i, j;
-	unsigned int unsigned_num = num;
-	char tmp;
+	int _num = *(int *)num, i, j;
+	unsigned int unsigned_num = _num;
+	char tmp, base_chars[] = "0123456789abcdef";
 
 	/* Check the buffer, and ensure that its size will fit the number */
 	if (buf == NULL || buf_size < num_len)
 		return (NULL);
 
 	/*
-	 * Handle negative number by converting it to a positive unsigned
+	 * Handle signed negative number by converting it to a positive unsigned
 	 *  equivalent (flip the sign).
 	 */
-	if (num < 0)
+	if (is_signed == 1 && _num < 0)
 		unsigned_num *= (-1);
 
 	/* Convert each digit to its corresponding character in the given base. */
 	for (i = 0; i < num_len; i++)
 	{
-		buf[i] = (unsigned_num % base) + '0';
+		buf[i] = base_chars[(unsigned_num % base)];
 		unsigned_num /= base;
 	}
 

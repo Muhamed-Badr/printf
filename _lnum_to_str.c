@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _lunum_to_str - Like `_num_to_str()` function but for `unsigned long`.
+ * _lnum_to_str - Like `_num_to_str()` function but for `long int`.
  * @buf: A pointer to the buffer where the converted number should be stored.
  * @buf_size: The buffer size.
  * @num: The decimal number that needs to be converted.
@@ -13,13 +13,18 @@
  *                  - `16` for hexadecimal.
  *                  - `8` for octal.
  *                  - ...etc.
+ * @is_signed: A flag that tells the function how to process the passed number:
+ *             - If `1`, the function treats `num` as signed.
+ *             - If `0`, the function treats `num` as unsigned.
  *
  * Return: On success, A pointer to the buffer `buf`.
  *         ON failure, NULL('\0').
  */
-char *_lunum_to_str(char *buf, int buf_size, unsigned long num, int num_len,
-		int base)
+char *_lnum_to_str(char *buf, int buf_size, void *num, int num_len,
+		int base, char is_signed)
 {
+	long _num = *(long *)num;
+	unsigned long unsigned_num = _num;
 	int i, j;
 	char tmp, base_chars[] = "0123456789abcdef";
 
@@ -27,11 +32,18 @@ char *_lunum_to_str(char *buf, int buf_size, unsigned long num, int num_len,
 	if (buf == NULL || buf_size < num_len)
 		return (NULL);
 
+	/*
+	 * Handle signed negative number by converting it to a positive unsigned
+	 *  equivalent (flip the sign).
+	 */
+	if (is_signed == 1 && _num < 0)
+		unsigned_num *= (-1);
+
 	/* Convert each digit to its corresponding character in the given base. */
 	for (i = 0; i < num_len; i++)
 	{
-		buf[i] = base_chars[(num % base)];
-		num /= base;
+		buf[i] = base_chars[(unsigned_num % base)];
+		unsigned_num /= base;
 	}
 
 	/*

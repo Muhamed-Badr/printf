@@ -94,6 +94,7 @@ typedef struct fs
  *     - fs: A pointer to a struct that holds the format specifier
  *            details (flags, width, precision, etc.).
  *     - ap: A `va_list` containing the variadic arguments.
+ *     Returns `int` which is the bytes written to the console by `write()`.
  *
  * Description: This structure links a format specifier type (as a string)
  *               to a specific function that processes and outputs the data
@@ -104,6 +105,68 @@ typedef struct type
 	char *type;
 	int (*f)(char *buf, int *buf_index, fs_t *fs, va_list ap);
 } type_t;
+
+/**
+ * struct length_functions - A structure to hold function pointers for
+ *                            handling numbers based on length modifiers.
+ * @num_digits: Pointer to a function that calculates the number of digits
+ *               in a given number, considering the length modifier
+ *               (e.g., short, long).
+ *              This function takes the following arguments:
+ *              - num: A void pointer to the number (allows various
+ *                      numeric types).
+ *              - base: The base in which the number is represented
+ *                       (e.g., 10 for decimal, 2 for binary).
+ *              - is_signed: A flag indicating if the number is signed
+ *                            (1 for signed, 0 for unsigned).
+ *              Returns the digit count of the number in the specified base.
+ * @num_to_str: Pointer to a function that converts a number to its string
+ *               representation, adjusted by the length modifier.
+ *              This function takes the following arguments:
+ *              - buf: A pointer to the buffer where the output string should
+ *                      be written.
+ *              - buf_size: The size of the buffer.
+ *              - num: A void pointer to the number being converted.
+ *              - num_len: The length (number of digits) of the number
+ *                          in the specified base.
+ *              - base: The base for the number conversion
+ *                       (e.g., 10 for decimal, 2 for binary).
+ *              - is_signed: A flag indicating if the number is signed
+ *                            (1 for signed, 0 for unsigned).
+ *              Returns a pointer to the buffer containing the string
+ *               representation of the number.
+ *
+ * Description: This structure is designed to hold function pointers that
+ *               perform operations (digit counting and string conversion)
+ *               on numbers based on their length modifiers.
+ */
+typedef struct length_functions {
+	int (*num_digits)(void *num, int base, char is_signed);
+	char *(*num_to_str)(char *buf, int buf_size, void *num, int num_len,
+			int base, char is_signed);
+} length_functions_t;
+
+/**
+ * struct length_modifier - A structure that maps length modifiers to their
+ *                           corresponding numeric handling functions.
+ * @modifier: A string representing the length modifier
+ *             (e.g., "h" for short, "l" for long).
+ *            This string is used to match the correct length modifier when
+ *             selecting functions for number operations.
+ * @functions: An instance of `length_functions_t` containing the function
+ *              pointers for:
+ *             - num_digits: Calculating the number of digits.
+ *             - num_to_str: Converting the number to a string representation.
+ *
+ * Description: This structure links a specific length modifier to its
+ *               corresponding functions for numeric operations. It allows
+ *               for dynamic selection of the correct functions based on
+ *               the provided length modifier.
+ */
+typedef struct length_modifier {
+	char *modifier;
+	length_functions_t functions;
+} length_modifier_t;
 
 int _printf(const char *format, ...);
 int handle_str(const char *str, int str_len, char *buf, int *buf_index);
@@ -116,14 +179,16 @@ int _strlen(char *s);
 char *_strchr(char *s, char c);
 char *_to_upper(char *buf, int buf_size);
 int _isdigit(int c);
-int _num_digits(int num, int base);
-int _unum_digits(unsigned int num, int base);
-int _lunum_digits(unsigned long num, int base);
-char *_num_to_str(char *buf, int buf_size, int num, int num_len, int base);
-char *_unum_to_str(char *buf, int buf_size, unsigned int num, int num_len,
-		int base);
-char *_lunum_to_str(char *buf, int buf_size, unsigned long num, int num_len,
-		int base);
+int _num_digits(void *num, int base, char is_signed);
+int _hnum_digits(void *num, int base, char is_signed);
+int _lnum_digits(void *num, int base, char is_signed);
+char *_num_to_str(char *buf, int buf_size, void *num, int num_len,
+		int base, char is_signed);
+char *_hnum_to_str(char *buf, int buf_size, void *num, int num_len,
+		int base, char is_signed);
+char *_lnum_to_str(char *buf, int buf_size, void *num, int num_len,
+		int base, char is_signed);
+length_functions_t get_length_func(char ch);
 int _check_buf(char *buf, int *buf_index);
 int apply_padding(char *buf, int *buf_index, char padding_ch, int padding_len);
 

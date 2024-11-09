@@ -55,11 +55,11 @@ int handle_p(char *buf, int *buf_index, fs_t *fs, va_list ap)
 	else
 	{
 		num = (unsigned long)ptr;
-		num_len = _lunum_digits(num, 16);
+		num_len = _lnum_digits(&num, 16, 0);
 		sign_required = (fs->flags.flag_plus || fs->flags.flag_space);
 		padding_ch = ((fs->flags.flag_zero &&
 					!fs->flags.flag_minus &&
-					!sign_required) ? '0' :' ');
+					!sign_required) ? '0' : ' ');
 		base_prefix = (fs->flags.flag_hash) ? "0X" : "0x";
 		base_prefix_len = _strlen(base_prefix);
 	}
@@ -102,7 +102,7 @@ int handle_p(char *buf, int *buf_index, fs_t *fs, va_list ap)
 				(fs->width - (num_len + sign_required + base_prefix_len)));
 
 	/* Convert the number to string and add it to the buffer */
-	if (ptr&& _lunum_to_str(tmp_buf, sizeof(tmp_buf), num, num_len, 16))
+	if (ptr && _lnum_to_str(tmp_buf, sizeof(tmp_buf), &num, num_len, 16, 0))
 	{
 		if (!fs->flags.flag_hash || _to_upper(tmp_buf, num_len))
 			/*

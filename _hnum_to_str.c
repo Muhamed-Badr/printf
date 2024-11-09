@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _unum_to_str - Like `_num_to_str()` function but for `unsigned int`.
+ * _hnum_to_str - Like `_num_to_str()` function but for `short int`.
  * @buf: A pointer to the buffer where the converted number should be stored.
  * @buf_size: The buffer size.
  * @num: The decimal number that needs to be converted.
@@ -13,25 +13,37 @@
  *                  - `16` for hexadecimal.
  *                  - `8` for octal.
  *                  - ...etc.
+ * @is_signed: A flag that tells the function how to process the passed number:
+ *             - If `1`, the function treats `num` as signed.
+ *             - If `0`, the function treats `num` as unsigned.
  *
  * Return: On success, A pointer to the buffer `buf`.
  *         ON failure, NULL('\0').
  */
-char *_unum_to_str(char *buf, int buf_size, unsigned int num, int num_len,
-		int base)
+char *_hnum_to_str(char *buf, int buf_size, void *num, int num_len,
+		int base, char is_signed)
 {
 	int i, j;
+	short _num = *(short *)num;
+	unsigned short unsigned_num = _num;
 	char tmp, base_chars[] = "0123456789abcdef";
 
 	/* Check the buffer, and ensure that its size will fit the number */
 	if (buf == NULL || buf_size < num_len)
 		return (NULL);
 
+	/*
+	 * Handle signed negative number by converting it to a positive unsigned
+	 *  equivalent (flip the sign).
+	 */
+	if (is_signed == 1 && _num < 0)
+		unsigned_num *= (-1);
+
 	/* Convert each digit to its corresponding character in the given base. */
 	for (i = 0; i < num_len; i++)
 	{
-		buf[i] = base_chars[(num % base)];
-		num /= base;
+		buf[i] = base_chars[(unsigned_num % base)];
+		unsigned_num /= base;
 	}
 
 	/*

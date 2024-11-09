@@ -11,34 +11,46 @@
  */
 int handle_b(char *buf, int *buf_index, fs_t *fs, va_list ap)
 {
-	int num, num_len, i;
+	length_functions_t functions;
+	long num;
+	int num_len = 0, i;
 	char tmp_buf[64];
 
 	(void)fs;
-	num = va_arg(ap, int);
-	num_len = (num < 0) ? 32 : _num_digits(num, 2);
+	if (fs->length == 'l')
+		num = va_arg(ap, long);
+	else if (fs->length == 'h')
+		num = (short)va_arg(ap, int);
+	else
+		num = va_arg(ap, int);
+	functions = get_length_func(fs->length);
+	if (num < 0)
+		num_len = 32;
+	else
+		num_len = (functions.num_digits) ? functions.num_digits(&num, 2, 1) : 0;
 
 	/* Convert the number to string and add it to the temporary buffer */
-	if (_num_to_str(tmp_buf, sizeof(tmp_buf), num, num_len, 2))
-	{
-		/*
-		 * Convert the number to the corresponding negative one
-		 *  using 2's complement
-		 */
-		if (num < 0)
+	if (functions.num_to_str)
+		if (functions.num_to_str(tmp_buf, sizeof(tmp_buf), &num, num_len, 2, 1))
 		{
-			/* Start from the end of the binary string to find the first '1' */
-			for (i = (num_len - 1); i >= 0 && tmp_buf[i] != '1'; i--)
-				;
-
 			/*
-			 * Flip the bits of the binary string for 2's complement,
-			 *  starting from the next digit after the detected first '1'
+			 * Convert the number to the corresponding negative one
+			 *  using 2's complement
 			 */
-			for (i--; i >= 0; i--)
-				tmp_buf[i] = (tmp_buf[i] == '1') ? '0' : '1';
+			if (num < 0)
+			{
+				/* Start from the end of the binary string to find the first '1' */
+				for (i = (num_len - 1); i >= 0 && tmp_buf[i] != '1'; i--)
+					;
+
+				/*
+				 * Flip the bits of the binary string for 2's complement,
+				 *  starting from the next digit after the detected first '1'
+				 */
+				for (i--; i >= 0; i--)
+					tmp_buf[i] = (tmp_buf[i] == '1') ? '0' : '1';
+			}
 		}
-	}
 
 	/*
 	 * Use `handle_str()` to copy the converted string from temporary

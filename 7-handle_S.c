@@ -106,7 +106,8 @@ int _S_strlen(char *s)
  */
 int S_handle_str(const char *str, int str_len, char *buf, int *buf_index)
 {
-	int total_bytes_written = 0, handled_str_len, norm_str_len, str_index;
+	int total_bytes_written = 0, handled_str_len, norm_str_len, str_index,
+		ch_ascii;
 	char tmp_buf[4], allowed_len;
 
 	if (str != NULL && str_len != 0)
@@ -128,12 +129,13 @@ int S_handle_str(const char *str, int str_len, char *buf, int *buf_index)
 
 			if (handled_str_len < str_len)
 			{
+				ch_ascii = str[str_index];
 				tmp_buf[0] = '\\';
 				tmp_buf[1] = 'x';
 				allowed_len = (str_len - handled_str_len);
 
 				/* Convert the number to string and add it to the buffer */
-				if (_unum_to_str((tmp_buf + 2), 2, str[str_index], 2, 16))
+				if (_hnum_to_str((tmp_buf + 2), 2, &ch_ascii, 2, 16, 0))
 					if (_to_upper((tmp_buf + 2), 2))
 					{
 						/*

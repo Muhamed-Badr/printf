@@ -8,10 +8,11 @@ int str_to_int(const char *str);
  *           passed should follow when printing. it contains the format
  *           specifier values.
  * @fs: A pointer to format specifier struct.
+ * @ap: A `va_list` object that contains the variadic arguments.
  *
  * Return: Format specifier length (A number >= 1).
  */
-int get_fs_values(const char *format, fs_t *fs)
+int get_fs_values(const char *format, fs_t *fs, va_list ap)
 {
 	int format_index;
 	char *result;
@@ -37,8 +38,16 @@ int get_fs_values(const char *format, fs_t *fs)
 	}
 
 	/* Set width value if exist. */
-	for (; _isdigit(format[format_index]); format_index++)
-		fs->width = (fs->width * 10) + (format[format_index] - '0');
+	if (format[format_index] == '*')
+	{
+		fs->width = va_arg(ap, int);
+		format_index++;
+	}
+	else
+	{
+		for (; _isdigit(format[format_index]); format_index++)
+			fs->width = (fs->width * 10) + (format[format_index] - '0');
+	}
 
 	/* Set precision value if '.' symbol is exist. */
 	if (format[format_index] == '.')

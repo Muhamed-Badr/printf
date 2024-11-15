@@ -172,7 +172,7 @@ int _printf(const char *format, ...);
 int handle_str(const char *str, int str_len, char *buf, int *buf_index);
 int handle_fs(const char *format, char *buf, int *buf_index,
 		int *total_bytes_written, va_list ap);
-int get_fs_values(const char *format, fs_t *fs);
+int get_fs_values(const char *format, fs_t *fs, va_list ap);
 int (*get_type_func(char ch))(char *, int *, fs_t *, va_list);
 char *_strncpy(char *dest, const char *src, int n);
 int _strlen(char *s);

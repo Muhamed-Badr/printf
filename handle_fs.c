@@ -18,7 +18,7 @@ int handle_fs(const char *format, char *buf, int *buf_index,
 	fs_t fs = {{0, 0, 0, 0, 0}, {6, 0}, 0, '\0', '\0'};
 	int fs_len, (*func)(char *, int *, fs_t *, va_list);
 
-	fs_len = get_fs_values(format, &fs);
+	fs_len = get_fs_values(format, &fs, ap);
 
 	func = get_type_func(fs.type_conversion);
 

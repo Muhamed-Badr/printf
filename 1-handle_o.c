@@ -37,7 +37,7 @@ int handle_o(char *buf, int *buf_index, fs_t *fs, va_list ap)
 		num = va_arg(ap, int);
 	functions = get_length_func(fs->length);
 	num_len = (functions.num_digits) ? functions.num_digits(&num, 8, 0) : 0;
-	base_prefix_len = (fs->flags.flag_hash) ? 1 : 0;
+	base_prefix_len = (fs->flags.flag_hash && num != 0) ? 1 : 0;
 	padding_ch = ((fs->flags.flag_zero && !fs->flags.flag_minus) ? '0' : ' ');
 	if ((fs->width - (num_len + base_prefix_len)) > 0)
 	{
@@ -58,7 +58,7 @@ int handle_o(char *buf, int *buf_index, fs_t *fs, va_list ap)
 				(fs->width - (num_len + base_prefix_len)));
 
 	/* Handle base prefix (enabled by `flag_hash`) for the number */
-	if (fs->flags.flag_hash)
+	if (base_prefix_len)
 	{
 		total_bytes_written += _check_buf(buf, buf_index);
 		buf[*buf_index + 1] = '0';

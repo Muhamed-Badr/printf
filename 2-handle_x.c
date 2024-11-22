@@ -1,5 +1,8 @@
 #include "main.h"
 
+#define ZERO_PADDING \
+	(fs->flags.flag_zero && !fs->flags.flag_minus && !fs->precision.is_set)
+
 /**
  * handle_x - Handle the type conversion `x` (integer numbers to hexadecimal).
  * @buf: A pointer to the buffer where the formatted output should be stored.
@@ -37,8 +40,12 @@ int handle_x(char *buf, int *buf_index, fs_t *fs, va_list ap)
 		num = va_arg(ap, int);
 	functions = get_length_func(fs->length);
 	num_len = (functions.num_digits) ? functions.num_digits(&num, 16, 0) : 0;
+	if (fs->precision.is_set &&
+			(fs->precision.value > num_len ||
+			 (fs->precision.value == 0 && num == 0)))
+		num_len = fs->precision.value;
 	base_prefix_len = (fs->flags.flag_hash && num != 0) ? 2 : 0;
-	padding_ch = ((fs->flags.flag_zero && !fs->flags.flag_minus) ? '0' : ' ');
+	padding_ch = (ZERO_PADDING ? '0' : ' ');
 	if ((fs->width - (num_len + base_prefix_len)) > 0)
 	{
 		if (fs->flags.flag_minus)

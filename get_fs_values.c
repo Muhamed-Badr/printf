@@ -52,11 +52,20 @@ int get_fs_values(const char *format, fs_t *fs, va_list ap)
 	/* Set precision value if '.' symbol is exist. */
 	if (format[format_index] == '.')
 	{
+		format_index++;
 		fs->precision.is_set = 1;
 		fs->precision.value = 0;
-		for (format_index += 1; _isdigit(format[format_index]); format_index++)
-			fs->precision.value = (fs->precision.value * 10) +
-				(format[format_index] - '0');
+		if (format[format_index] == '*')
+		{
+			fs->precision.value = va_arg(ap, int);
+			format_index++;
+		}
+		else
+		{
+			for (; _isdigit(format[format_index]); format_index++)
+				fs->precision.value = (fs->precision.value * 10) +
+					(format[format_index] - '0');
+		}
 	}
 
 	/* Set length modifier value if exist. */

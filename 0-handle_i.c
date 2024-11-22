@@ -1,5 +1,8 @@
 #include "main.h"
 
+#define ZERO_PADDING \
+	(fs->flags.flag_zero && !fs->flags.flag_minus && !fs->precision.is_set)
+
 /**
  * handle_i - Handle the type conversion `i` or `d` (integer values/numbers).
  * @buf: A pointer to the buffer where the formatted output should be stored.
@@ -39,8 +42,12 @@ int handle_i(char *buf, int *buf_index, fs_t *fs, va_list ap)
 		num = va_arg(ap, int);
 	functions = get_length_func(fs->length);
 	num_len = (functions.num_digits) ? functions.num_digits(&num, 10, 1) : 0;
+	if (fs->precision.is_set &&
+			(fs->precision.value > num_len ||
+			 (fs->precision.value == 0 && num == 0)))
+		num_len = fs->precision.value;
 	sign_required = (num < 0 || fs->flags.flag_plus || fs->flags.flag_space);
-	padding_ch = ((fs->flags.flag_zero && !fs->flags.flag_minus) ? '0' : ' ');
+	padding_ch = (ZERO_PADDING ? '0' : ' ');
 	if ((fs->width - (num_len + sign_required)) > 0)
 	{
 		if (fs->flags.flag_minus)

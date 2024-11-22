@@ -4,6 +4,14 @@ int main(void)
 {
 	/*
 	 * %i OR %d
+	 *
+	 * 1. (' ' -> √)
+	 * 2. ('+' -> √)
+	 * 3. ('-' -> √)
+	 * 4. ('0' -> √)
+	 * 5. ('#' -> X)
+	 * 6. (width -> √)
+	 * 7. (precision -> √)
 	 */
 	/*
 	 * Uncomment the below comment when you try to test your own `_printf`,

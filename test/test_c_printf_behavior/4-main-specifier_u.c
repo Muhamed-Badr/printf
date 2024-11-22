@@ -11,7 +11,7 @@ int main(void)
 	 * 4. ('0' -> √)
 	 * 5. ('#' -> X)
 	 * 6. (width -> √)
-	 * 7. (precision -> X)
+	 * 7. (precision -> √)
 	 */
 	/*
 	 * Uncomment the below comment when you try to test your own `_printf`,

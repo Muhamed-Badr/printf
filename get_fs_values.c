@@ -74,8 +74,11 @@ int get_fs_values(const char *format, fs_t *fs, va_list ap)
 		fs->length = format[format_index++];
 
 	/* Set type conversion if exist. */
-	result = _strchr("dioxXucsSbrRpnfeEgG%", format[format_index]);
-	if (result != NULL && *result != '\0')
+	/*
+	   result = _strchr("dioxXucsSbrRpnfeEgG%", format[format_index]);
+	   if (result != NULL && *result != '\0')
+	 */
+	if (format[format_index] != '\0') /* avoid running out format limits */
 		fs->type_conversion = format[format_index++];
 
 	return (format_index);

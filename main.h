@@ -206,6 +206,7 @@ int handle_R(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_p(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_n(char *buf, int *buf_index, fs_t *fs, va_list ap);
 int handle_mod_symbol(char *buf, int *buf_index, fs_t *fs, va_list ap);
+int handle_unrecognized_fs(char *buf, int *buf_index, fs_t *fs);
 
 #endif /* MAIN_H */
 

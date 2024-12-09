@@ -25,11 +25,23 @@ int handle_fs(const char *format, char *buf, int *buf_index,
 	/*
 	 * If `get_type_func()` returns NULL('\0'), this indicates
 	 *  that the detected '%' and the string of length `fs_len` after it
-	 *  isn't a correct format specifier. So, handle it as a normal string.
+	 *  isn't a correct format specifier. So, handle it as
+	 *  invalid/unrecognized format specifier.
 	 * Else handle it as a format specifier.
 	 */
 	if (func == NULL)
-		*total_bytes_written += handle_str(format, fs_len, buf, buf_index);
+	{
+		/*
+		 * IF `fs.type_conversion == '\0'`. So, handle format specifier
+		 *  as invalid (this indicates an error. So, return `-1`).
+		 * Else handle format specifier as unrecognized.
+		 */
+		if (fs.type_conversion == '\0')
+			*total_bytes_written = -1;
+		else
+			*total_bytes_written += handle_unrecognized_fs(buf, buf_index,
+					&fs);
+	}
 	else
 		*total_bytes_written += func(buf, buf_index, &fs, ap);
 

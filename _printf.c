@@ -15,7 +15,8 @@
 int _printf(const char *format, ...)
 {
 	char *buf;
-	int buf_index = -1, format_index = 0, str_len, total_bytes_written = 0;
+	int buf_index = -1, format_index = 0, str_len, total_bytes_written = 0,
+		bytes_written = 0;
 	va_list ap;
 
 	if (format == NULL)
@@ -26,7 +27,7 @@ int _printf(const char *format, ...)
 	if (buf == NULL)
 		return (-1);
 
-	while (format[format_index] != '\0')
+	while (format[format_index] != '\0' && total_bytes_written != -1)
 	{
 		/*
 		 * Through in `format` string until the end OR detect `%`
@@ -47,11 +48,14 @@ int _printf(const char *format, ...)
 					&total_bytes_written, ap);
 	}
 	if (buf_index > -1)
-		total_bytes_written += write(1, buf, (buf_index + 1));
+		bytes_written = write(1, buf, (buf_index + 1));
 
 	va_end(ap);
 	free(buf);
 
-	return (total_bytes_written);
+	if (total_bytes_written == -1 || bytes_written == -1)
+		return (-1);
+	else
+		return (total_bytes_written + bytes_written);
 }
 

@@ -1,0 +1,8 @@
+read these chatgpt conversations:
+	1. Dynamic Shared Buffer Allocation:
+		https://chatgpt.com/share/676561a9-828c-8000-b8ca-74ff7d1d7a87
+	2. Dynamic Buffer Sizing:
+		https://chatgpt.com/share/67656260-5dc4-8000-8258-fdc43f299f0c
+	3. Variadic Functions in C `printf()`(general for the whole project):
+		https://chatgpt.com/share/6765628b-f858-8000-abdc-10c99a6553a4
+

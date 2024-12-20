@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * handle_i - Handle the type conversion `i` or `d` (integer values/numbers).
+ * handle_n - Handle the type conversion `n`.
  * @buf: A pointer to the buffer where the formatted output should be stored.
  * @buf_index: A pointer to the current index in the buffer.
  * @fs: A pointer to `fs_t` struct, it stores the format specifier values.
